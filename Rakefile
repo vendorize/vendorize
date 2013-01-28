@@ -34,4 +34,11 @@ Rake::TestTask.new(:spec) do |t|
   t.verbose = true
 end
 
-task :default => :spec
+require 'cucumber'
+require 'cucumber/rake/task'
+
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "features --format pretty"
+end
+
+task :default => [ :spec, :features ]
