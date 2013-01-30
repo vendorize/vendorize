@@ -25,14 +25,9 @@ load 'rails/tasks/engine.rake'
 
 Bundler::GemHelper.install_tasks
 
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 
-Rake::TestTask.new(:spec) do |t|
-  t.libs << 'lib'
-  t.libs << 'spec'
-  t.pattern = 'spec/**/*_spec.rb'
-  t.verbose = true
-end
+RSpec::Core::RakeTask.new(:spec)
 
 require 'cucumber'
 require 'cucumber/rake/task'

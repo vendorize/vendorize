@@ -8,3 +8,4 @@ test/dummy/.sass-cache
 *.swp
 Gemfile.lock
 *.log
+tmp/

@@ -17,10 +17,10 @@ Gem::Specification.new do |s|
   s.test_file = Dir["spec/**/*"]
 
   s.add_dependency "rails", ">= 3.1"
-  s.add_development_dependency "minitest"
-  s.add_development_dependency "guard-minitest"
-  s.add_development_dependency "guard-cucumber"
-  s.add_development_dependency "minitest-reporters"
-  s.add_development_dependency "rb-inotify", "~> 0.8.8"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "cucumber-rails"
   s.add_development_dependency "aruba"
+  s.add_development_dependency "guard-rspec"
+  s.add_development_dependency "guard-cucumber"
+  s.add_development_dependency "rb-inotify", "~> 0.8.8"
 end

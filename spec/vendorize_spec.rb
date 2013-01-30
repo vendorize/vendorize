@@ -2,6 +2,6 @@ require 'spec_helper'
 
 describe 'Vendorize' do
   it "must be a module" do
-    Vendorize.must_be_kind_of Module
+    Vendorize.should be_a Module
   end
 end
