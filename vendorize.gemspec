@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.summary     = "Toolkit for rails asset engines"
   s.description = "Toolkit for rails asset engines"
 
-  s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_file = Dir["spec/**/*"]
+  s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", ">= 3.1"
   s.add_development_dependency "rspec-rails"

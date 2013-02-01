@@ -1,4 +1,8 @@
-# desc "Explaining what the task does"
-# task :vendorize do
-#   # Task goes here
-# end
+namespace :vendorize do
+
+  desc "Updates vendorized assets as defined in vendorize.rb"
+  task :update do
+    Vendorize.update!
+  end
+
+end
