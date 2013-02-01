@@ -18,3 +18,23 @@ Given /^I add the vendorize gem to the project$/ do
     And I successfully run `bundle install --path .bundle/bundle`
   }
 end
+
+Given /^I create a new rails project and configure vendorize$/ do
+  steps %Q{
+    Given I create a new rails project
+    And I add the vendorize gem to the project
+    And I successfully run `bundle exec rails g vendorize:config`
+    And a file named "config/vendorize.rb" should exist
+    And the file "config/vendorize.rb" should contain exactly:
+    """
+
+    vendorize :jquery do
+      version '1.9.0'
+
+      javascript 'jquery.js',     "http://code.jquery.com/jquery-\#{version}.js"
+      javascript 'jquery.min.js', "http://code.jquery.com/jquery-\#{version}.min.js"
+    end
+
+    """
+  }
+end
