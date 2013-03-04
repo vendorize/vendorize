@@ -1,4 +1,4 @@
-require 'vendorize/engine'
+require 'vendorize/engine' if Kernel.const_defined?(:Rails)
 require 'vendorize/manifest'
 require 'vendorize/vendorizer'
 
